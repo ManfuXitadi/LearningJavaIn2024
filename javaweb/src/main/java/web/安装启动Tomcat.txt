@@ -1,0 +1,24 @@
+1 Tomcat：是一个免费的开源Web应用服务器；属于轻量级应用服务器；在并发访问用户不是很多的场合下被普遍使用
+2 Tomcat下载安装启动
+    下载：根据自己使用JDK版本选择合适的Tomcat
+    安装后配置环境变量：
+        JAVA_HOME:路径配置JDK的bin （因为启动Tomcat脚本的时候会用到JAVA_HOME这个变量）
+        CATALINA_HOME:值配置为Tomcat的安装路径（需要配置bin的上级目录）
+        并将Tomcat安装路径配置到PATH中（bin目录）
+    当使用cmd进入命令行：输入 startup 后启动成功 stop（将shutdown.bat改成stop.bat）后停止 Tomcat就配置成功了
+3 环境变量：（environment variables）一般是指在操作系统中用来指定操作系统运行环境的一些参数
+    用户通过设置环境变量，来更好的运行进程。如当系统运行一个程序而没告诉完整路径，系统会在当前目录以及PATH环境变量中指定的路径去找
+4 IDEA启动Tomcat-第一个webapp（Follow below）
+    新建空白工程，创建 src-> main -> java ……，配置Project Structure
+    在main目录下创建webapp
+    在webapp下创建目录WEB-INF
+    在webapp下创建index.jsp 并在其中编写内容
+    在WEB-INF下创建web.xml 并在其中编写内容
+    IDEA插件（plugin）中下载SmartTomcat插件
+    添加Configurations,配置SmartTomcat
+    启动webapp
+5 细节
+    Web应用的名字：ContextPath指定了web应用的名字（Tomcat的配置中）
+    浏览器显示index.jsp内容：Tomcat服务器启动的web应用默认欢迎页是index.jsp （Tomcat目录下/conf/web.xml有注明）
+    web.xml文件名以及WEB-INF目录名都不能修改，这是Servlet规范的一部分
+    main目录下创建的webapp可以更改，这不是Servlet规范的一部分
