@@ -1,0 +1,11 @@
+1 Servlet是什么
+    （尤指Java语言在服务器上运行的）小型应用程序
+    Servlet是一种规范（Sun公司制定）
+2 Servlet规范
+    Servlet接口
+    配置文件：名字、存放路径、内容格式
+    Web应用的目录结构
+3 三个参与方
+    Sun公司：定义Servlet接口
+    Web应用开发团队：实现Servlet接口
+    Tomcat开发团队：实现Web服务器功能，接受用户请求，根据请求路径条用对应的Servlet来执行业务逻辑
